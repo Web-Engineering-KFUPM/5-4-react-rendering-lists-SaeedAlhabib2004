@@ -25,7 +25,7 @@ export default function CourseCard({ course, index, onMutateCourse }) {
     e.preventDefault();
     // TODO: create a new task { id, title, dueDate: date, isDone: false }
     // TODO: append it to existing tasks and reset inputs 
-    const newTask = {id: crypto.randomUUID(), title: title, dueDate: date, isDone: false};
+    const newTask = {id: ("task-"+Date.now), title: title, dueDate: date, isDone: false};
     onMutateCourse(index, tasks => [...tasks, newTask]);
     setTitle("");
     setDate("");
